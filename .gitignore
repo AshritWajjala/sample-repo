@@ -1,0 +1,33 @@
+# --- Python & Environment ---
+.venv/
+__pycache__/
+*.py[cod]
+.env
+
+# --- Project Specifics ---
+# These are generated when you run setup.py or pip install -e .
+mlproject.egg-info/
+dist/
+build/
+
+# --- ML Artifacts (The heavy stuff) ---
+# We keep the folder, but ignore the files inside
+artifacts/*
+# Exception: If you want to keep the folder structure in Git
+!.gitkeep
+
+# --- CatBoost logs ---
+# CatBoost creates these every time you train a model
+catboost_info/
+notebook/catboost_info/
+
+# --- Logs ---
+# You don't want every single execution log in your version history
+logs/*.log
+
+# --- Notebooks ---
+.ipynb_checkpoints/
+
+# --- Data ---
+# Excluding the raw data inside the notebook folder
+notebook/data/*.csv
