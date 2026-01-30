@@ -11,8 +11,9 @@ dist/
 build/
 
 # --- ML Artifacts (The heavy stuff) ---
-# We keep the folder, but ignore the files inside
-artifacts/*
+# We want to ignore the CSVs (data) but KEEP the models (pickles)
+artifacts/*.csv
+!artifacts/*.pkl
 # Exception: If you want to keep the folder structure in Git
 !.gitkeep
 
